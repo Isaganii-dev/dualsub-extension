@@ -40,4 +40,4 @@ YouTube, Google, or Netflix.
 ## Changes and contact
 
 If this policy changes, the updated version will be published with the extension and the
-date above will change. Questions: [your contact email]
+date above will change.
