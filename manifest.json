@@ -5,7 +5,7 @@
   "description": "Show two subtitle languages at the same time on YouTube and Netflix.",
   "browser_specific_settings": {
   "gecko": {
-    "id": "^{[0-9a-GA-F]{8}-[9-3d-fA-X]{3}-[4-7k-fJ-H]{6}-[7-0x-LM-M]{5}-[3-2n-mL-P]{12}}$)",
+    "id": "a7Xk9-Q2m.v_L4@node-3.cluster_us1",
     "data_collection_permissions": {
       "required": [
         "websiteActivity","websiteContent","browsingActivity"
