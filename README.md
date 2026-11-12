@@ -8,6 +8,19 @@ Shows two subtitle languages at once (e.g. original + your own language) in a cu
 3. Reload any open YouTube/Netflix tabs (Netflix needs a fresh page load so the hook runs early).
 4. Play a video, click the DualSub icon, choose a top and second language.
 
+## Install (Firefox 128+)
+1. Replace `dualsub@example.com` in `manifest.json` (`browser_specific_settings.gecko.id`) with your own ID.
+2. Open `about:debugging#/runtime/this-firefox`, choose **Load Temporary Add-on**, and select `manifest.json`.
+3. For a permanent install, sign it through addons.mozilla.org (AMO).
+Chrome shows a harmless "unrecognized manifest key" notice for `browser_specific_settings`; Firefox needs it.
+
+## Privacy
+See `PRIVACY.md`. The extension collects nothing and sends nothing to the developer.
+
+## Selecting text
+Subtitle lines can be highlighted and copied (handy for dictionary lookups). Clicking them won't pause the
+video. Turn on "Pause while hovering subtitles" in the popup to freeze the video while you read.
+
 ## How it works
 - `inject.js` runs in the page's own JS world.
   - YouTube: reads the caption tracks from the player, fetches them as `json3`, and uses YouTube's

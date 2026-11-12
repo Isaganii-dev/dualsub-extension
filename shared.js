@@ -10,5 +10,6 @@ const DS_DEFAULTS = {
   colorPrimary: '#ffffff',
   colorSecondary: '#ffd54a',
   bg: 0.55,                    // background opacity
-  bottom: 10                   // % from the bottom of the player
+  bottom: 10,                  // % from the bottom of the player
+  pauseOnHover: false          // pause the video while the mouse is over the subtitles
 };

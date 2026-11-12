@@ -23,6 +23,32 @@
   box.append(lineP, lineS);
   overlay.append(box);
 
+  // Let people select text without the player treating it as a click (pause / fullscreen).
+  for (const ev of ['pointerdown', 'mousedown', 'mouseup', 'click', 'dblclick', 'contextmenu']) {
+    for (const el of [lineP, lineS]) el.addEventListener(ev, (e) => e.stopPropagation());
+  }
+
+  let pausedByUs = false;
+  const resume = () => {
+    if (!pausedByUs) return;
+    pausedByUs = false;
+    const v = getVideo();
+    if (v && v.paused) v.play().catch(() => {});
+  };
+  for (const el of [lineP, lineS]) {
+    el.addEventListener('mouseenter', () => {
+      const v = getVideo();
+      if (settings.pauseOnHover && v && !v.paused) { v.pause(); pausedByUs = true; }
+    });
+    el.addEventListener('mouseleave', () => {
+      if (!String(window.getSelection()).trim()) resume();
+    });
+  }
+  // after selecting, resume when the person clicks anywhere else
+  document.addEventListener('mousedown', (e) => {
+    if (!overlay.contains(e.target)) resume();
+  }, true);
+
   function applyStyle() {
     const s = overlay.style;
     s.setProperty('--ds-fp', settings.sizePrimary);

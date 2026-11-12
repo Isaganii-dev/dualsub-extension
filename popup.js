@@ -1,5 +1,5 @@
 const $ = (id) => document.getElementById(id);
-const FIELDS = ['enabled', 'primary', 'secondary', 'order', 'sizePrimary', 'sizeSecondary', 'colorPrimary', 'colorSecondary', 'bg', 'bottom'];
+const FIELDS = ['enabled', 'primary', 'secondary', 'order', 'sizePrimary', 'sizeSecondary', 'colorPrimary', 'colorSecondary', 'bg', 'bottom', 'pauseOnHover'];
 let settings = { ...DS_DEFAULTS };
 let langSig = null;
 

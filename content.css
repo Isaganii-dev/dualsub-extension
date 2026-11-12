@@ -18,5 +18,10 @@ html.ds-on .player-timedtext-text-container { display: none !important; }
   text-shadow: 0 0 3px #000, 0 1px 2px #000;
 }
 #ds-overlay .ds-line:empty { display: none; }
+#ds-overlay .ds-line {
+  pointer-events: auto; cursor: text;
+  user-select: text; -webkit-user-select: text;
+}
+#ds-overlay .ds-line::selection { background: #2457d6; color: #fff; text-shadow: none; }
 #ds-overlay .ds-p { color: var(--ds-cp, #fff);    font-size: calc(var(--ds-h, 600px) * var(--ds-fp, 4.2) * 0.01); }
 #ds-overlay .ds-s { color: var(--ds-cs, #ffd54a); font-size: calc(var(--ds-h, 600px) * var(--ds-fs, 3.4) * 0.01); }
