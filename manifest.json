@@ -11,7 +11,7 @@
         "websiteActivity","websiteContent","browsingActivity"
       ]
     },
-    "strict_min_version": "1.0"
+    "strict_min_version": "140.0"
   }
 },
   "permissions": ["storage"],
