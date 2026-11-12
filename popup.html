@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <h1>DualSub</h1>
+    <label class="switch"><input type="checkbox" id="enabled"><span>On</span></label>
+  </header>
+
+  <p id="status" role="status">Looking for a video…</p>
+
+  <section>
+    <label>Top line <select id="primary"></select></label>
+    <label>Second line <select id="secondary"></select></label>
+    <label>Order
+      <select id="order">
+        <option value="primary-top">Top line above</option>
+        <option value="secondary-top">Second line above</option>
+      </select>
+    </label>
+  </section>
+
+  <section class="grid">
+    <label>Top size <input type="range" id="sizePrimary" min="2" max="8" step="0.1"></label>
+    <label>Second size <input type="range" id="sizeSecondary" min="2" max="8" step="0.1"></label>
+    <label>Top color <input type="color" id="colorPrimary"></label>
+    <label>Second color <input type="color" id="colorSecondary"></label>
+    <label>Background <input type="range" id="bg" min="0" max="1" step="0.05"></label>
+    <label>Height <input type="range" id="bottom" min="2" max="40" step="1"></label>
+  </section>
+
+  <script src="shared.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

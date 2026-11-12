@@ -1,0 +1,22 @@
+/* Hide the sites' own captions while DualSub is on */
+html.ds-on .ytp-caption-window-container,
+html.ds-on .player-timedtext,
+html.ds-on .player-timedtext-text-container { display: none !important; }
+
+#ds-overlay {
+  position: absolute; inset: 0; pointer-events: none; z-index: 2147483000;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+}
+#ds-overlay .ds-box {
+  position: absolute; left: 5%; right: 5%; bottom: var(--ds-bottom, 10%);
+  display: flex; flex-direction: column; align-items: center; gap: 4px;
+}
+#ds-overlay .ds-line {
+  display: inline-block; max-width: 100%; padding: .1em .5em; border-radius: 4px;
+  background: rgba(0, 0, 0, var(--ds-bg, .55));
+  line-height: 1.3; text-align: center; white-space: pre-line;
+  text-shadow: 0 0 3px #000, 0 1px 2px #000;
+}
+#ds-overlay .ds-line:empty { display: none; }
+#ds-overlay .ds-p { color: var(--ds-cp, #fff);    font-size: calc(var(--ds-h, 600px) * var(--ds-fp, 4.2) * 0.01); }
+#ds-overlay .ds-s { color: var(--ds-cs, #ffd54a); font-size: calc(var(--ds-h, 600px) * var(--ds-fs, 3.4) * 0.01); }

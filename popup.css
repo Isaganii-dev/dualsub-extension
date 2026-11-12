@@ -1,0 +1,15 @@
+:root { color-scheme: light dark; --fg: #1d1f24; --muted: #6a707b; --line: #d9dce2; --bg: #fafaf8; --accent: #2457d6; }
+@media (prefers-color-scheme: dark) { :root { --fg: #eceef2; --muted: #9aa1ad; --line: #34383f; --bg: #1b1d21; --accent: #7aa2ff; } }
+* { box-sizing: border-box; }
+body { width: 320px; margin: 0; padding: 14px 16px 16px; background: var(--bg); color: var(--fg); font: 13px/1.4 system-ui, "Segoe UI", sans-serif; }
+header { display: flex; align-items: center; justify-content: space-between; }
+h1 { margin: 0; font-size: 17px; font-weight: 650; }
+.switch { display: flex; align-items: center; gap: 6px; cursor: pointer; }
+#status { margin: 8px 0 12px; padding: 7px 9px; border-left: 3px solid var(--accent); background: color-mix(in srgb, var(--accent) 8%, transparent); color: var(--muted); min-height: 32px; }
+section { display: flex; flex-direction: column; gap: 9px; padding-top: 12px; border-top: 1px solid var(--line); margin-top: 4px; }
+section.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 14px; }
+section > label, section.grid > label { display: flex; flex-direction: column; gap: 4px; color: var(--muted); }
+select { width: 100%; padding: 5px 6px; font: inherit; color: var(--fg); background: transparent; border: 1px solid var(--line); border-radius: 5px; }
+input[type=range] { width: 100%; accent-color: var(--accent); }
+input[type=color] { width: 100%; height: 26px; padding: 0; border: 1px solid var(--line); border-radius: 5px; background: transparent; }
+select:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
