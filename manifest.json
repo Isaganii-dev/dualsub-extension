@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "DualSub for YouTube & Netflix",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Show two subtitle languages at the same time on YouTube and Netflix.",
   "permissions": [
     "storage"
